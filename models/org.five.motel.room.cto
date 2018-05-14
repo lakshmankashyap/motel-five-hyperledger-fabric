@@ -1,0 +1,15 @@
+namespace org.five.motel.room
+
+asset Room identified by roomId {
+  o String    roomId
+  o Integer   roomNumber
+  o Double    roomPrice 
+  o Boolean   isVacant
+  o Beds      numBeds default="SINGLE"
+}
+
+enum Beds {
+  o   SINGLE
+  o   DOUBLE
+  o   TRIPLE
+}

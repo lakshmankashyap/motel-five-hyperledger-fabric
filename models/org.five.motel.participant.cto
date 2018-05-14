@@ -1,0 +1,12 @@
+namespace  org.five.motel.participant
+
+participant Guest identified by guestId {
+  o String guestId
+  o GuestInfo guestinfo
+}
+
+concept GuestInfo {
+  o String firstName
+  o String lastName
+  o String dlNum
+}

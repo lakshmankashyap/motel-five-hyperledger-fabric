@@ -1,0 +1,20 @@
+namespace org.five.motel.stay
+
+import org.five.motel.room.Room
+
+asset Stay identified by stayId {
+  o String    stayId
+  o Integer   stayLength
+  --> Room    room
+}
+
+transaction RentRoom {
+  o Integer   roomNumber
+  o String    dateStarted
+  o String    dateEnded
+  --> Stay    stay
+}
+
+event RoomRented {
+  o String    roomNumber
+}
